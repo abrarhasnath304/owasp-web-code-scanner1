@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Web Code Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ OWASP Web Code Scanner</h1>
+        
+        <div class="scanner-section">
+            <div class="input-panel">
+                <h2>🔍 Scan Options</h2>
+                
+                <!-- URL Scanner -->
+                <div class="url-scanner">
+                    <h3>URL Scanner</h3>
+                    <input type="url" id="urlInput" class="url-input" placeholder="Enter URL to scan (e.g., https://example.com)">
+                    <button class="scan-btn" onclick="scanUrl()">🔍 Scan URL</button>
+                </div>
+
+                <!-- Code Scanner -->
+                <div class="code-scanner">
+                    <h3>Code Scanner</h3>
+                    <textarea class="code-input" id="codeInput" placeholder="Paste your HTML, JavaScript, or PHP code here for analysis...
+
+Example vulnerable code:
+<script>
+function login() {
+    var username = document.getElementById('user').value;
+    var password = document.getElementById('pass').value;
+    
+    // SQL Injection vulnerability
+    var query = 'SELECT * FROM users WHERE username=\'' + username + '\' AND password=\'' + password + '\'';
+    
+    // XSS vulnerability
+    document.getElementById('welcome').innerHTML = 'Welcome ' + username;
+    
+    // Insecure direct object reference
+    window.location = '/profile/' + username;
+}
+</script>"></textarea>
+                    <button class="scan-btn" onclick="scanCode()">🔍 Scan Code</button>
+                </div>
+            </div>
+            
+            <div class="results-panel">
+                <h2>🚨 Scan Results</h2>
+                <div class="stats" id="stats" style="display: none;">
+                    <div class="stat">
+                        <div class="stat-number" id="criticalCount">0</div>
+                        <div class="stat-label">Critical</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="highCount">0</div>
+                        <div class="stat-label">High</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="mediumCount">0</div>
+                        <div class="stat-label">Medium</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="lowCount">0</div>
+                        <div class="stat-label">Low</div>
+                    </div>
+                </div>
+                <div class="results" id="results">
+                    <div class="no-issues">
+                        Ready to scan for OWASP Top 10 vulnerabilities...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="owasp-info">
+            <h2>📚 OWASP Top 10 (2021) Vulnerabilities Detected</h2>
+            <div class="owasp-grid">
+                <div class="owasp-item">
+                    <div class="owasp-rank">A01 - Broken Access Control</div>
+                    <div>Unrestricted access to resources, privilege escalation</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A02 - Cryptographic Failures</div>
+                    <div>Weak encryption, exposed sensitive data</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A03 - Injection</div>
+                    <div>SQL, NoSQL, OS command injection vulnerabilities</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A04 - Insecure Design</div>
+                    <div>Missing security controls in design phase</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A05 - Security Misconfiguration</div>
+                    <div>Default configs, incomplete setups, open cloud storage</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A06 - Vulnerable Components</div>
+                    <div>Known vulnerabilities in libraries and frameworks</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A07 - Authentication Failures</div>
+                    <div>Broken authentication and session management</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A08 - Software Integrity Failures</div>
+                    <div>Insecure CI/CD, plugins, libraries from untrusted sources</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A09 - Logging Failures</div>
+                    <div>Insufficient logging, monitoring, and incident response</div>
+                </div>
+                <div class="owasp-item">
+                    <div class="owasp-rank">A10 - Server-Side Request Forgery</div>
+                    <div>SSRF allows attackers to coerce server requests</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
