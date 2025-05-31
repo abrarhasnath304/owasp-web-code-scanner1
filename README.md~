@@ -1,1 +1,179 @@
 # owasp-web-code-scanner1
+# 🛡️ OWASP Web Security Scanner
+
+A comprehensive web security scanner that helps identify OWASP Top 10 vulnerabilities in both live websites and code snippets. This tool combines static code analysis with dynamic website scanning to provide a thorough security assessment.
+
+## 🌟 Features
+
+- **Dual Scanning Modes**:
+  - URL Scanner: Scan live websites for security vulnerabilities
+  - Code Scanner: Analyze code snippets for security issues
+
+- **OWASP Top 10 Coverage**:
+  - A01: Broken Access Control
+  - A02: Cryptographic Failures
+  - A03: Injection
+  - A04: Insecure Design
+  - A05: Security Misconfiguration
+  - A06: Vulnerable Components
+  - A07: Authentication Failures
+  - A08: Software Integrity Failures
+  - A09: Logging Failures
+  - A10: Server-Side Request Forgery
+
+- **Detailed Reporting**:
+  - Severity-based categorization
+  - Detailed vulnerability descriptions
+  - Specific findings and recommendations
+  - Visual statistics and metrics
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Modern web browser
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/owasp-web-scanner.git
+cd owasp-web-scanner
+```
+
+2. Install backend dependencies:
+```bash
+cd Backend
+npm install
+```
+
+3. Create a `.env` file in the Backend directory:
+```
+PORT=3000
+NODE_ENV=development
+```
+
+### Running the Application
+
+1. Start the backend server:
+```bash
+cd Backend
+npm run dev
+```
+
+2. Open the frontend:
+   - Navigate to the `Frontend` directory
+   - Open `owasp-scanner.html` in your web browser
+   - Or use a local server to serve the frontend files
+
+## 💻 Usage
+
+### URL Scanning
+
+1. Enter the target URL in the URL input field
+2. Click "Scan URL"
+3. View the results in the results panel
+
+### Code Scanning
+
+1. Paste your code into the code input area
+2. Click "Scan Code"
+3. Review the identified vulnerabilities
+
+## 🔍 Security Checks
+
+### URL Scanner Checks
+- Security headers analysis
+- Cookie security
+- HTTPS implementation
+- Server information disclosure
+- CORS configuration
+- Authentication mechanisms
+- And more...
+
+### Code Scanner Checks
+- SQL injection patterns
+- XSS vulnerabilities
+- Insecure authentication
+- Hardcoded credentials
+- Unsafe deserialization
+- And more...
+
+## 🛠️ Technology Stack
+
+- **Frontend**:
+  - HTML5
+  - CSS3
+  - JavaScript (ES6+)
+  - Modern Web APIs
+
+- **Backend**:
+  - Node.js
+  - Express.js
+  - Axios for HTTP requests
+  - Security middleware (Helmet, CORS)
+
+## 🔒 Security Considerations
+
+- The scanner is designed for security testing and educational purposes
+- Always obtain proper authorization before scanning websites
+- Some checks may trigger security systems or firewalls
+- Use responsibly and ethically
+
+## 📝 Best Practices
+
+1. **Before Scanning**:
+   - Ensure you have permission to scan the target
+   - Back up any code before analysis
+   - Use in a controlled environment
+
+2. **During Scanning**:
+   - Monitor system resources
+   - Be aware of rate limiting
+   - Check for false positives
+
+3. **After Scanning**:
+   - Review all findings carefully
+   - Prioritize critical vulnerabilities
+   - Implement fixes systematically
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⚠️ Disclaimer
+
+This tool is for educational and security testing purposes only. Always:
+- Obtain proper authorization before scanning
+- Follow responsible disclosure practices
+- Respect privacy and security policies
+- Use in accordance with applicable laws
+
+## 🙏 Acknowledgments
+
+- OWASP Foundation for the Top 10 list
+- Open source community
+- Security researchers and contributors
+
+## 📞 Support
+
+For support, please:
+1. Check the documentation
+2. Open an issue
+3. Contact the maintainers
+
+---
+
+Made with ❤️ for better web security
